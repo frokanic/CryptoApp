@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'com.squareup.sqldelight'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -78,4 +80,25 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0"
 
+    // Compose dependencies
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    implementation "androidx.navigation:navigation-compose:2.6.0-alpha04"
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+    // SQL Delight
+    implementation "com.squareup.sqldelight:android-driver:1.5.2"
+    implementation "com.squareup.sqldelight:coroutines-extensions-jvm:1.5.2"
+
+    //Tradingview Lightweight Charts
+    implementation 'com.tradingview:lightweightcharts:3.8.0'
+
+}
+
+sqldelight {
+    CryptoDatabase {
+        packageName = "com.example.sqldelightcryptoapp"
+    }
 }

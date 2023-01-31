@@ -1,0 +1,22 @@
+CREATE TABLE portfolioEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    symbol TEXT NOT NULL,
+    price REAL NOT NULL,
+    date TEXT NOT NULL,
+    desc TEXT
+);      --At what price did I buy?
+
+
+getAllPortfolio:
+SELECT *
+FROM portfolioEntity;
+
+insertToPortfolio:
+INSERT OR REPLACE
+INTO portfolioEntity
+VALUES(?, ?, ?, ?, ?, ?);
+
+deleteFromPortfolioByName:
+DELETE FROM portfolioEntity
+WHERE name = :name;

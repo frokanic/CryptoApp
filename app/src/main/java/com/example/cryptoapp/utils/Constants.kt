@@ -2,10 +2,10 @@ package com.example.stockmarketapp.utils
 
 object Constants {
 
-    const val BASE_URL_ALPHAVANTAGE = "https://alphavantage.co"
-    const val API_KEY_ALPHAVANTAGE = "MID44R1E8985VTXX"
+    private const val BASE_URL = "https://api.coinmarketcap.com"
+    const val ENDPOINT = "$BASE_URL/data-api/v3/cryptocurrency/listing?start=1&limit=500"
+    const val API_KEY = "a0f43ea1-58f1-418d-8cfa-33ae08f4220e"
 
-    const val BASE_URL_POLYGON = "https://api.polygon.io"
-    const val API_KEY_POLYGON = "xLFHd1pbfIiucUqYap4n0gQLdZX9BMff"
+    const val CHART_URL = "https://s.tradingview.com/widgetembed/"
 
 }
