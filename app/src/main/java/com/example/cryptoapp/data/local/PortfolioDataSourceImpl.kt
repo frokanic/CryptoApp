@@ -3,7 +3,7 @@ package com.example.cryptoapp.data.local
 import com.example.sqldelightcryptoapp.CryptoDatabase
 import com.squareup.sqldelight.runtime.coroutines.asFlow
 import com.squareup.sqldelight.runtime.coroutines.mapToList
-import crypto_app.cryptodb.PortfolioEntity
+import cryptoapp.cryptodb.PortfolioEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
@@ -19,7 +19,7 @@ class PortfolioDataSourceImpl(
     }
 
     override suspend fun insertToPortfolio(
-        id: Int?,
+        id: Long?,
         name: String,
         symbol: String,
         price: Long,

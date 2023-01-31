@@ -1,6 +1,6 @@
 package com.example.cryptoapp.data.local
 
-import crypto_app.cryptodb.PortfolioEntity
+import cryptoapp.cryptodb.PortfolioEntity
 import kotlinx.coroutines.flow.Flow
 
 interface PortfolioDataSource {
@@ -8,7 +8,7 @@ interface PortfolioDataSource {
     fun getAllPortfolio(): Flow<List<PortfolioEntity>>
 
     suspend fun insertToPortfolio(
-        id: Int? = null,
+        id: Long?,
         name: String,
         symbol: String,
         price: Long,

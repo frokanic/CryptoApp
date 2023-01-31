@@ -1,5 +1,5 @@
 CREATE TABLE portfolioEntity (
-    id INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     symbol TEXT NOT NULL,
     price REAL NOT NULL,
@@ -15,7 +15,7 @@ FROM portfolioEntity;
 insertToPortfolio:
 INSERT OR REPLACE
 INTO portfolioEntity
-VALUES(?, ?, ?, ?, ?, ?);
+VALUES(?, ?, ?, ?, ?, ?); ---VALUES(id, name, symbol, price, date, desc);
 
 deleteFromPortfolioByName:
 DELETE FROM portfolioEntity
