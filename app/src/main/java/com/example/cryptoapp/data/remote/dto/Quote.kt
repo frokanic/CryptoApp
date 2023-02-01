@@ -22,3 +22,5 @@ data class Quote(
     val volume24h: Double,
     val ytdPriceChangePercentage: Double
 )
+
+

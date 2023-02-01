@@ -13,3 +13,5 @@ data class AuditInfo(
     val reportUrl: String,
     val score: String
 )
+
+

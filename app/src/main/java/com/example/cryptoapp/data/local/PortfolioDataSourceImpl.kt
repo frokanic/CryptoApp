@@ -18,6 +18,7 @@ class PortfolioDataSourceImpl(
         return queries.getAllPortfolio().asFlow().mapToList()
     }
 
+
     override suspend fun insertToPortfolio(
         id: Long?,
         name: String,
